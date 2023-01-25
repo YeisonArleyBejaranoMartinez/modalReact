@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import { Modals } from './coponents/Modals'
+import ListaTareas from './coponents/ListaTareas'
+import Tron from './JuegoTron/components/Tron'
+// import { Modals } from './coponents/Modals'
+
+
 
 
 function App() {
@@ -9,8 +13,10 @@ function App() {
 
   return (
     <div className="App">
-      <Modals/>
-          </div>
+      {/* <Modals /> */}
+      {/* <ListaTareas/> */}
+      <Tron/>
+    </div>
   )
 }
 
