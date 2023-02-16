@@ -1,32 +1,43 @@
 export const UNIT = 15;
-export const BOARD_SIZE = 600;
+export const BOARD_SIZE = 750;
+
+export const GAME_READY = 1;
+export const GAME_PLAYING = 2;
+export const GAME_ENDED = 3;
+
 export const DIRECTIONS = {
-  left: { x: -UNIT, y: 0 },
-  right: { x: UNIT, y: 0 },
-  up: { x: 0, y: -UNIT },
-  down: { x: 0, y: UNIT },
+  LEFT: { x: -UNIT, y: 0 },
+  RIGHT: { x: UNIT, y: 0 },
+  UP: { x: 0, y: -UNIT },
+  DOWN: { x: 0, y: UNIT },
 };
+
 export const PLAYER_ONE = {
   color: "#CC0000",
   id: "1",
   keys: {
-    38: DIRECTIONS.up,
-    39: DIRECTIONS.right,
-    40: DIRECTIONS.down,
-    37: DIRECTIONS.left,
+    38: DIRECTIONS.UP,
+    39: DIRECTIONS.RIGHT,
+    40: DIRECTIONS.DOWN,
+    37: DIRECTIONS.LEFT,
   },
-  direccion: DIRECTIONS.right,
+  direction: DIRECTIONS.RIGHT,
   position: { x: UNIT * 6, y: UNIT * 6 },
+  hasDied: false,
+  instructions: "Flechas de dirección",
 };
+
 export const PLAYER_TWO = {
-  color: "#0000cc",
+  color: "#0000CC",
   id: "2",
   keys: {
-    87: DIRECTIONS.up,
-    68: DIRECTIONS.right,
-    83: DIRECTIONS.down,
-    65: DIRECTIONS.left,
+    87: DIRECTIONS.UP,
+    68: DIRECTIONS.RIGHT,
+    83: DIRECTIONS.DOWN,
+    65: DIRECTIONS.LEFT,
   },
-  direccion: DIRECTIONS.left,
-  position: { x: UNIT * 35, y: UNIT * 35 },
+  direction: DIRECTIONS.LEFT,
+  position: { x: UNIT * 43, y: UNIT * 43 },
+  hasDied: false,
+  instructions: "Teclas AWSD",
 };
